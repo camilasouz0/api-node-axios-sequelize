@@ -1,0 +1,33 @@
+{
+  "name": "projetocat",
+  "version": "1.0.0",
+  "description": "Uma api que consulta raças de gato",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/tests/index.js && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camilasouz0/api-node-axios-sequelize.git"
+  },
+  "keywords": [
+    "cat",
+    "nodejs",
+    "api"
+  ],
+  "author": "Camila Souza",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/camilasouzaa/projetocat#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "crypto": "^1.0.1",
+    "http": "0.0.1-security",
+    "loader": "^2.1.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}

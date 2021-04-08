@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <title>PEGAR CHAVE</title>
+
+    <style>
+    body{background: #f6f4f4;font-family: 'New Tegomin', serif;}.button{font-family: 'New Tegomin', serif;background-color: rgb(196, 185, 185);font-size: 16px;margin: 4px 2px;}   
+    .button:hover{
+        background-color: rgb(126, 116, 116);
+        color: black;
+    }
+    input[type=text] {
+        width: 15%;
+        padding: 12px 20px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }    
+    </style>
+</head>
+<body>
+        <label><h1>Chave de API</h1></label>
+        <input type="text" id="pesquisa">
+        <button class="button" type="submit" onclick="chave();">Pegar Chave</button>
+        <span id="pegar"></span>
+
+    <script>
+        function chave(){
+
+        var arq = $('#pesquisa').val();
+        $.getJSON("http://localhost:8082?x=" + arq, function(data) {
+            var mostrar = document.getElementById('pegar')
+            /* console.log(mostrar) */
+                mostrar.innerHTML += `
+                                <span> 
+                                    ${data} 
+                                </span>`; 
+            })
+        }
+    </script>
+    
+</body>
+</html>
